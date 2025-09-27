@@ -1,0 +1,181 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(53,125,249,0.08);
+  padding: 18px 0 10px 0;
+  margin: 0 auto 32px auto;
+  max-width: 700px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-link {
+  color: #357DF9;
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.nav-link:hover {
+  background: #FFD93D;
+  color: #FF6B6B;
+  transform: scale(1.08);
+}
+.nav-link.active {
+  background: linear-gradient(90deg,#357DF9 0%,#FF6B6B 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(53,125,249,0.12);
+  font-weight: 700;
+}
+/* Trending Blog Styles */
+.animated-bg {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #357DF9, #6C63FF, #FF6B6B, #FFD93D);
+  background-size: 800% 800%;
+  animation: gradientMove 16s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(53,125,249,0.12), 0 1.5px 8px rgba(0,0,0,0.08);
+  padding: 40px 32px;
+  backdrop-filter: blur(2px);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #357DF9;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(53,125,249,0.15);
+  animation: bounceIn 1.2s;
+}
+@keyframes bounceIn {
+  0% {transform: scale(0.8); opacity: 0;}
+  60% {transform: scale(1.1); opacity: 1;}
+  100% {transform: scale(1);}
+}
+.subtitle {
+  font-size: 1.3rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.highlight {
+  color: #FF6B6B;
+  font-weight: bold;
+  background: linear-gradient(90deg,#357DF9,#FF6B6B,#FFD93D);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn-primary {
+  background: linear-gradient(90deg,#357DF9 0%,#FF6B6B 100%);
+  color: #fff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(53,125,249,0.18);
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg,#FFD93D 0%,#FF6B6B 100%);
+  transform: scale(1.05);
+}
+.btn-secondary {
+  background: #f3f4f6;
+  color: #357DF9;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 24px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(53,125,249,0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-secondary:hover {
+  background: #FFD93D;
+  color: #FF6B6B;
+  transform: scale(1.04);
+}
+.section-title {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(53,125,249,0.08);
+}
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.post-item {
+  margin-bottom: 1.2rem;
+  background: #f8f9fa;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(53,125,249,0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.post-item:hover {
+  box-shadow: 0 8px 24px rgba(53,125,249,0.18);
+  transform: translateY(-2px) scale(1.02);
+}
+.post-link {
+  display: block;
+  padding: 18px 28px;
+  color: #357DF9;
+  font-size: 1.15rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.post-link:hover {
+  text-decoration: underline;
+  color: #FF6B6B;
+}
+.post-content {
+  font-size: 1.18rem;
+  color: #333;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(53,125,249,0.08);
+  animation: fadeIn 0.8s;
+}
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
